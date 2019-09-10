@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WebApplication1.Models.Результат>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Соревнования.Тип_соревнований)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Спортсмен.Имя)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Занятое_место)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Время)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Набрано_очков)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Соревнования)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Соревнования_ID_Соревнований)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Соревнования.Тип_соревнований)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Спортсмен.Имя)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Занятое_место)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Время)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Набрано_очков)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_Соревнования)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Соревнования_ID_Соревнований)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Результата }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Результата }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Результата })
+        </td>
+    </tr>
+}
+
+</table>

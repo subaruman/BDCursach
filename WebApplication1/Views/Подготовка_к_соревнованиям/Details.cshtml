@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.Подготовка_к_соревнованиям
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Подготовка_к_соревнованиям</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Секция.Секция1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Секция.Секция1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Спортивный_клуб.Название)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Спортивный_клуб.Название)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Тренер.Спортивный_разряд)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Тренер.Спортивный_разряд)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Дата_тренировки)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Дата_тренировки)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Соревнования)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Соревнования)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Тренировки }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

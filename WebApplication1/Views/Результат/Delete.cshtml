@@ -1,0 +1,80 @@
+﻿@model WebApplication1.Models.Результат
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Результат</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Соревнования.Тип_соревнований)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Соревнования.Тип_соревнований)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Спортсмен.Имя)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Спортсмен.Имя)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Занятое_место)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Занятое_место)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Время)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Время)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Набрано_очков)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Набрано_очков)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Соревнования)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Соревнования)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Соревнования_ID_Соревнований)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Соревнования_ID_Соревнований)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

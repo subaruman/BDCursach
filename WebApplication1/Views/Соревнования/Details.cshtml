@@ -1,0 +1,58 @@
+﻿@model WebApplication1.Models.Соревнования
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Соревнования</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Дата_соревнований)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Дата_соревнований)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Тип_соревнований)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Тип_соревнований)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Вид_спорта)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Вид_спорта)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Спонсор_соревнований)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Спонсор_соревнований)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Место_проведения)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Место_проведения)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Соревнований }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

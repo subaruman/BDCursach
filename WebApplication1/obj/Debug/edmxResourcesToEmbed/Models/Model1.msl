@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Владелец">
+      <EntityTypeMapping TypeName="Model.Владелец">
+        <MappingFragment StoreEntitySet="Владелец">
+          <ScalarProperty Name="ID_Владельца" ColumnName="ID_Владельца" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+          <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+          <ScalarProperty Name="Дата_рождения" ColumnName="Дата_рождения" />
+          <ScalarProperty Name="Пол" ColumnName="Пол" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Договор">
+      <EntityTypeMapping TypeName="Model.Договор">
+        <MappingFragment StoreEntitySet="Договор">
+          <ScalarProperty Name="Номер_договора" ColumnName="Номер_договора" />
+          <ScalarProperty Name="Дата_заключения" ColumnName="Дата_заключения" />
+          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+          <ScalarProperty Name="Серия_и_номер_паспорта" ColumnName="Серия_и_номер_паспорта" />
+          <ScalarProperty Name="Дата_выдачи_паспорта" ColumnName="Дата_выдачи_паспорта" />
+          <ScalarProperty Name="Кем_выдан_паспорт" ColumnName="Кем_выдан_паспорт" />
+          <ScalarProperty Name="Срок_действия_договора" ColumnName="Срок_действия_договора" />
+          <ScalarProperty Name="ID_Группы" ColumnName="ID_Группы" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Подготовка_к_соревнованиям">
+      <EntityTypeMapping TypeName="Model.Подготовка_к_соревнованиям">
+        <MappingFragment StoreEntitySet="Подготовка_к_соревнованиям">
+          <ScalarProperty Name="ID_Тренировки" ColumnName="ID_Тренировки" />
+          <ScalarProperty Name="Дата_тренировки" ColumnName="Дата_тренировки" />
+          <ScalarProperty Name="ID_Спорт_клуба" ColumnName="ID_Спорт_клуба" />
+          <ScalarProperty Name="ID_Группы" ColumnName="ID_Группы" />
+          <ScalarProperty Name="ID_Тренера" ColumnName="ID_Тренера" />
+          <ScalarProperty Name="ID_Соревнования" ColumnName="ID_Соревнования" />
+          <ScalarProperty Name="Соревнования_ID_Соревнований" ColumnName="Соревнования_ID_Соревнований" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Результат">
+      <EntityTypeMapping TypeName="Model.Результат">
+        <MappingFragment StoreEntitySet="Результат">
+          <ScalarProperty Name="ID_Результата" ColumnName="ID_Результата" />
+          <ScalarProperty Name="Занятое_место" ColumnName="Занятое_место" />
+          <ScalarProperty Name="Время" ColumnName="Время" />
+          <ScalarProperty Name="Набрано_очков" ColumnName="Набрано_очков" />
+          <ScalarProperty Name="ID_Соревнования" ColumnName="ID_Соревнования" />
+          <ScalarProperty Name="Соревнования_ID_Соревнований" ColumnName="Соревнования_ID_Соревнований" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Секция">
+      <EntityTypeMapping TypeName="Model.Секция">
+        <MappingFragment StoreEntitySet="Секция">
+          <ScalarProperty Name="ID_Группы" ColumnName="ID_Группы" />
+          <ScalarProperty Name="Количество_людей" ColumnName="Количество_людей" />
+          <ScalarProperty Name="Секция1" ColumnName="Секция1" />
+          <ScalarProperty Name="Вид_спорта" ColumnName="Вид_спорта" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Соревнования">
+      <EntityTypeMapping TypeName="Model.Соревнования">
+        <MappingFragment StoreEntitySet="Соревнования">
+          <ScalarProperty Name="ID_Соревнований" ColumnName="ID_Соревнований" />
+          <ScalarProperty Name="Дата_соревнований" ColumnName="Дата_соревнований" />
+          <ScalarProperty Name="Тип_соревнований" ColumnName="Тип_соревнований" />
+          <ScalarProperty Name="Вид_спорта" ColumnName="Вид_спорта" />
+          <ScalarProperty Name="Спонсор_соревнований" ColumnName="Спонсор_соревнований" />
+          <ScalarProperty Name="Место_проведения" ColumnName="Место_проведения" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Сотрудники">
+      <EntityTypeMapping TypeName="Model.Сотрудники">
+        <MappingFragment StoreEntitySet="Сотрудники">
+          <ScalarProperty Name="ID_Сотрудника" ColumnName="ID_Сотрудника" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+          <ScalarProperty Name="Общий_стаж" ColumnName="Общий_стаж" />
+          <ScalarProperty Name="Зарплата" ColumnName="Зарплата" />
+          <ScalarProperty Name="ID_Спорт_клуба" ColumnName="ID_Спорт_клуба" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Спортивный_клуб">
+      <EntityTypeMapping TypeName="Model.Спортивный_клуб">
+        <MappingFragment StoreEntitySet="Спортивный_клуб">
+          <ScalarProperty Name="ID_Спорт_клуба" ColumnName="ID_Спорт_клуба" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Адрес" ColumnName="Адрес" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+          <ScalarProperty Name="Дата_основания" ColumnName="Дата_основания" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Спортсмен">
+      <EntityTypeMapping TypeName="Model.Спортсмен">
+        <MappingFragment StoreEntitySet="Спортсмен">
+          <ScalarProperty Name="ID_Спортсмена" ColumnName="ID_Спортсмена" />
+          <ScalarProperty Name="Имя" ColumnName="Имя" />
+          <ScalarProperty Name="Фамилия" ColumnName="Фамилия" />
+          <ScalarProperty Name="Пол" ColumnName="Пол" />
+          <ScalarProperty Name="Дата_рождения" ColumnName="Дата_рождения" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Тренер">
+      <EntityTypeMapping TypeName="Model.Тренер">
+        <MappingFragment StoreEntitySet="Тренер">
+          <ScalarProperty Name="ID_Тренера" ColumnName="ID_Тренера" />
+          <ScalarProperty Name="Спортивный_разряд" ColumnName="Спортивный_разряд" />
+          <ScalarProperty Name="Вид_спорта" ColumnName="Вид_спорта" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

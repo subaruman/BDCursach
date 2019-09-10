@@ -1,0 +1,82 @@
+﻿@model WebApplication1.Models.Сотрудники
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Сотрудники</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Спортивный_клуб.Название)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Спортивный_клуб.Название)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Тренер.Спортивный_разряд)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Тренер.Спортивный_разряд)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Имя)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Имя)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Фамилия)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Фамилия)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Телефон)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Телефон)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Должность)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Должность)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Общий_стаж)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Общий_стаж)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Зарплата)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Зарплата)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Сотрудника }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,24 @@
+﻿@*@model IEnumerable<WebApplication1.Models.Владелец>
+    @Html.DisplayNameFor(model => model.Имя)
+    @Html.DisplayFor(modelItem => v.Имя)
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //ViewBag.Title = "Home Page";
+}
+
+<a href="@Url.Action("Index", "Владелец" )">Владелец</a><br />
+<a href="@Url.Action("Index", "Спортивный_клуб")">Спортивный клуб</a><br />
+<a href="@Url.Action("Index", "Спортсмен")">Спортсмен</a><br />
+<a href="@Url.Action("Index", "Договор" )">Договор</a><br />
+<a href="@Url.Action("Index", "Секция")">Секция</a><br />
+<a href="@Url.Action("Index", "Тренер")">Тренер</a><br />
+<a href="@Url.Action("Index", "Сотрудники")">Сотрудники</a><br />
+<a href="@Url.Action("Index", "Подготовка_к_соревнованиям")">Подготовка к соревнованиям</a><br />
+<a href="@Url.Action("Index", "Соревнования")">Соревнования</a><br />
+<a href="@Url.Action("Index", "Результат")">Результат</a><br />
+
+
+
+
+

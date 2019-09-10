@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a5c365a19033419a8b09a3f5021597c9" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Владелец" Width="1.5" PointX="8" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Договор" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Подготовка_к_соревнованиям" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Результат" Width="1.5" PointX="10.125" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Секция" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Соревнования" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Сотрудники" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Спортивный_клуб" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Спортсмен" Width="1.5" PointX="6.875" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Тренер" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_dbo_Владелец_dbo_Спортивный_клуб_ID_Владельца" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Договор_dbo_Секция_ID_Группы" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Договор_dbo_Спортсмен_Номер_договора" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Подготовка_к_соревнованиям_dbo_Секция_ID_Группы" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Подготовка_к_соревнованиям_dbo_Соревнования_Соревнования_ID_Соревнований" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Подготовка_к_соревнованиям_dbo_Спортивный_клуб_ID_Спорт_клуба" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Подготовка_к_соревнованиям_dbo_Тренер_ID_Тренера" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Результат_dbo_Соревнования_Соревнования_ID_Соревнований" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Результат_Спортсмен" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Тренер_dbo_Секция_ID_Тренера" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Сотрудники_dbo_Спортивный_клуб_ID_Спорт_клуба" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Сотрудники_dbo_Тренер_ID_Сотрудника" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

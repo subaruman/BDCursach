@@ -1,0 +1,74 @@
+﻿@model WebApplication1.Models.Спортсмен
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Спортсмен</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Договор.Кем_выдан_паспорт)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Договор.Кем_выдан_паспорт)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Результат.Занятое_место)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Результат.Занятое_место)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Имя)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Имя)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Фамилия)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Фамилия)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Пол)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Пол)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Дата_рождения)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Дата_рождения)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Телефон)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Телефон)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Спортсмена }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
