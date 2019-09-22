@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
+using WebApplication1.Models;
 
 public class DBConnection : DbContext
 {
@@ -17,23 +14,23 @@ public class DBConnection : DbContext
     {
     }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Договор> Договор { get; set; }
+    public DbSet<Договор> Договор { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Секция> Секция { get; set; }
+    public DbSet<Секция> Секция { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Спортсмен> Спортсмен { get; set; }
+    public DbSet<Спортсмен> Спортсмен { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Владелец> Владелец { get; set; }
+    public DbSet<Владелец> Владелец { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Спортивный_клуб> Спортивный_клуб { get; set; }
+    public DbSet<Спортивный_клуб> Спортивный_клуб { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
+    public DbSet<Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Тренер> Тренер { get; set; }
+    public DbSet<Тренер> Тренер { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Результат> Результат { get; set; }
+    public DbSet<Результат> Результат { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Соревнования> Соревнования { get; set; }
+    public DbSet<Соревнования> Соревнования { get; set; }
 
-    public System.Data.Entity.DbSet<WebApplication1.Models.Сотрудники> Сотрудники { get; set; }
+    public DbSet<Сотрудники> Сотрудники { get; set; }
 }
