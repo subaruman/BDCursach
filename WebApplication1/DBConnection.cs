@@ -14,21 +14,21 @@ public class DBConnection : DbContext
     {
     }
 
-    public DbSet<Договор> Договор { get; set; }
+    //public DbSet<Договор> Договор { get; set; }
 
-    public DbSet<Секция> Секция { get; set; }
+    //public DbSet<Секция> Секция { get; set; }
 
     public DbSet<Спортсмен> Спортсмен { get; set; }
 
-    public DbSet<Владелец> Владелец { get; set; }
+    //public DbSet<Владелец> Владелец { get; set; }
 
     public DbSet<Спортивный_клуб> Спортивный_клуб { get; set; }
 
-    public DbSet<Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
+    //public DbSet<Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
 
-    public DbSet<Тренер> Тренер { get; set; }
+    //public DbSet<Тренер> Тренер { get; set; }
 
-    public DbSet<Результат> Результат { get; set; }
+    //public DbSet<> Результат { get; set; }
 
     public DbSet<Соревнования> Соревнования { get; set; }
 

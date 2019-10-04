@@ -17,11 +17,11 @@ namespace WebApplication1.Models
     public partial class Соревнования
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Соревнования()
-        {
-            this.Подготовка_к_соревнованиям = new HashSet<Подготовка_к_соревнованиям>();
-        }
-        [Key, ForeignKey("Результат")]
+        //public Соревнования()
+        //{
+        //    this.Подготовка_к_соревнованиям = new HashSet<Подготовка_к_соревнованиям>();
+        //}
+        [Key]
         public int ID_Соревнований { get; set; }
         public Nullable<System.DateTime> Дата_соревнований { get; set; }
         public string Тип_соревнований { get; set; }
@@ -30,7 +30,9 @@ namespace WebApplication1.Models
         public string Место_проведения { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
-        public virtual Результат Результат { get; set; }
+        public virtual ICollection<Спортсмен> Спортсменs { get; set; }
+        public virtual ICollection<Сотрудники> Сотрудникиs  { get; set; }
+        //        public virtual ICollection<Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
+        //      public virtual Результат Результат { get; set; }
     }
 }

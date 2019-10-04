@@ -129,30 +129,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ВладелецController.cs" />
-    <Compile Include="Controllers\ДоговорController.cs" />
-    <Compile Include="Controllers\Подготовка_к_соревнованиямController.cs" />
-    <Compile Include="Controllers\РезультатController.cs" />
-    <Compile Include="Controllers\СекцияController.cs" />
     <Compile Include="Controllers\СоревнованияController.cs" />
     <Compile Include="Controllers\СотрудникиController.cs" />
     <Compile Include="Controllers\Спортивный_клубController.cs" />
     <Compile Include="Controllers\СпортсменController.cs" />
-    <Compile Include="Controllers\ТренерController.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Владелец.cs" />
-    <Compile Include="Models\Договор.cs" />
-    <Compile Include="Models\Подготовка_к_соревнованиям.cs" />
-    <Compile Include="Models\Результат.cs" />
-    <Compile Include="Models\Секция.cs" />
     <Compile Include="Models\Соревнования.cs" />
     <Compile Include="Models\Сотрудники.cs" />
     <Compile Include="Models\Спортивный_клуб.cs" />
     <Compile Include="Models\Спортсмен.cs" />
-    <Compile Include="Models\Тренер.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,36 +179,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Владелец\Index.cshtml" />
-    <Content Include="Views\Владелец\Create.cshtml" />
-    <Content Include="Views\Владелец\Delete.cshtml" />
-    <Content Include="Views\Владелец\Details.cshtml" />
-    <Content Include="Views\Владелец\Edit.cshtml" />
-    <Content Include="Views\Договор\Create.cshtml" />
-    <Content Include="Views\Договор\Delete.cshtml" />
-    <Content Include="Views\Договор\Details.cshtml" />
-    <Content Include="Views\Договор\Edit.cshtml" />
-    <Content Include="Views\Договор\Index.cshtml" />
-    <Content Include="Views\Подготовка_к_соревнованиям\Create.cshtml" />
-    <Content Include="Views\Подготовка_к_соревнованиям\Delete.cshtml" />
-    <Content Include="Views\Подготовка_к_соревнованиям\Details.cshtml" />
-    <Content Include="Views\Подготовка_к_соревнованиям\Edit.cshtml" />
-    <Content Include="Views\Подготовка_к_соревнованиям\Index.cshtml" />
-    <Content Include="Views\Результат\Create.cshtml" />
-    <Content Include="Views\Результат\Delete.cshtml" />
-    <Content Include="Views\Результат\Details.cshtml" />
-    <Content Include="Views\Результат\Edit.cshtml" />
-    <Content Include="Views\Результат\Index.cshtml" />
-    <Content Include="Views\Секция\Create.cshtml" />
-    <Content Include="Views\Секция\Delete.cshtml" />
-    <Content Include="Views\Секция\Details.cshtml" />
-    <Content Include="Views\Секция\Edit.cshtml" />
-    <Content Include="Views\Секция\Index.cshtml" />
     <Content Include="Views\Соревнования\Create.cshtml" />
     <Content Include="Views\Соревнования\Delete.cshtml" />
     <Content Include="Views\Соревнования\Details.cshtml" />
     <Content Include="Views\Соревнования\Edit.cshtml" />
     <Content Include="Views\Соревнования\Index.cshtml" />
+    <Content Include="Views\Спортсмен\Create.cshtml" />
+    <Content Include="Views\Спортсмен\Delete.cshtml" />
+    <Content Include="Views\Спортсмен\Details.cshtml" />
+    <Content Include="Views\Спортсмен\Edit.cshtml" />
+    <Content Include="Views\Спортсмен\Index.cshtml" />
     <Content Include="Views\Сотрудники\Create.cshtml" />
     <Content Include="Views\Сотрудники\Delete.cshtml" />
     <Content Include="Views\Сотрудники\Details.cshtml" />
@@ -231,16 +199,6 @@
     <Content Include="Views\Спортивный_клуб\Details.cshtml" />
     <Content Include="Views\Спортивный_клуб\Edit.cshtml" />
     <Content Include="Views\Спортивный_клуб\Index.cshtml" />
-    <Content Include="Views\Спортсмен\Create.cshtml" />
-    <Content Include="Views\Спортсмен\Delete.cshtml" />
-    <Content Include="Views\Спортсмен\Details.cshtml" />
-    <Content Include="Views\Спортсмен\Edit.cshtml" />
-    <Content Include="Views\Спортсмен\Index.cshtml" />
-    <Content Include="Views\Тренер\Create.cshtml" />
-    <Content Include="Views\Тренер\Delete.cshtml" />
-    <Content Include="Views\Тренер\Details.cshtml" />
-    <Content Include="Views\Тренер\Edit.cshtml" />
-    <Content Include="Views\Тренер\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

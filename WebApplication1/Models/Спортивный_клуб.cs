@@ -19,7 +19,7 @@ namespace WebApplication1.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Спортивный_клуб()
         {
-            this.Подготовка_к_соревнованиям = new HashSet<Подготовка_к_соревнованиям>();
+            //this.Подготовка_к_соревнованиям = new HashSet<Подготовка_к_соревнованиям>();
             this.Сотрудники = new HashSet<Сотрудники>();
         }
         [Key, ForeignKey("Сотрудники")]
@@ -29,10 +29,11 @@ namespace WebApplication1.Models
         public Nullable<int> Телефон { get; set; }
         public Nullable<System.DateTime> Дата_основания { get; set; }
     
-        public virtual Владелец Владелец { get; set; }
+       // public virtual Владелец Владелец { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
+        //public virtual ICollection<Подготовка_к_соревнованиям> Подготовка_к_соревнованиям { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Сотрудники> Сотрудники { get; set; }
+        public virtual ICollection<Спортсмен> Спортсменs { get; set; }
     }
 }

@@ -1,22 +1,16 @@
 ﻿@model IEnumerable<WebApplication1.Models.Спортсмен>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Спортсмен";
 }
 
-<h2>Index</h2>
+    <h2>Спортсмен</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Добавить запись", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Договор.Кем_выдан_паспорт)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Результат.Занятое_место)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Имя)
         </th>
@@ -38,12 +32,6 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Договор.Кем_выдан_паспорт)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Результат.Занятое_место)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Имя)
         </td>
         <td>
@@ -59,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.Телефон)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Спортсмена }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Спортсмена }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Спортсмена })
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.ID_Спортсмена }) |
+            @Html.ActionLink("Подробно", "Details", new { id=item.ID_Спортсмена }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.ID_Спортсмена })
         </td>
     </tr>
 }

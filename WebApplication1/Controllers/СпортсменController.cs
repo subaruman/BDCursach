@@ -1,6 +1,10 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 
@@ -13,8 +17,7 @@ namespace WebApplication1.Controllers
         // GET: Спортсмен
         public ActionResult Index()
         {
-            var спортсмен = db.Спортсмен.Include(с => с.Договор).Include(с => с.Результат);
-            return View(спортсмен.ToList());
+            return View(db.Спортсмен.ToList());
         }
 
         // GET: Спортсмен/Details/5
@@ -35,8 +38,6 @@ namespace WebApplication1.Controllers
         // GET: Спортсмен/Create
         public ActionResult Create()
         {
-            ViewBag.ID_Спортсмена = new SelectList(db.Договор, "Номер_договора", "Кем_выдан_паспорт");
-            ViewBag.ID_Спортсмена = new SelectList(db.Результат, "ID_Результата", "Занятое_место");
             return View();
         }
 
@@ -54,8 +55,6 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID_Спортсмена = new SelectList(db.Договор, "Номер_договора", "Кем_выдан_паспорт", спортсмен.ID_Спортсмена);
-            ViewBag.ID_Спортсмена = new SelectList(db.Результат, "ID_Результата", "Занятое_место", спортсмен.ID_Спортсмена);
             return View(спортсмен);
         }
 
@@ -71,8 +70,6 @@ namespace WebApplication1.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ID_Спортсмена = new SelectList(db.Договор, "Номер_договора", "Кем_выдан_паспорт", спортсмен.ID_Спортсмена);
-            ViewBag.ID_Спортсмена = new SelectList(db.Результат, "ID_Результата", "Занятое_место", спортсмен.ID_Спортсмена);
             return View(спортсмен);
         }
 
@@ -89,8 +86,6 @@ namespace WebApplication1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ID_Спортсмена = new SelectList(db.Договор, "Номер_договора", "Кем_выдан_паспорт", спортсмен.ID_Спортсмена);
-            ViewBag.ID_Спортсмена = new SelectList(db.Результат, "ID_Результата", "Занятое_место", спортсмен.ID_Спортсмена);
             return View(спортсмен);
         }
 

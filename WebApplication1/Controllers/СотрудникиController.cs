@@ -1,6 +1,10 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 
@@ -13,7 +17,7 @@ namespace WebApplication1.Controllers
         // GET: Сотрудники
         public ActionResult Index()
         {
-            var сотрудники = db.Сотрудники.Include(с => с.Спортивный_клуб).Include(с => с.Тренер);
+            var сотрудники = db.Сотрудники.Include(с => с.Спортивный_клуб);
             return View(сотрудники.ToList());
         }
 
@@ -36,7 +40,6 @@ namespace WebApplication1.Controllers
         public ActionResult Create()
         {
             ViewBag.ID_Спорт_клуба = new SelectList(db.Спортивный_клуб, "ID_Спорт_клуба", "Название");
-            ViewBag.ID_Сотрудника = new SelectList(db.Тренер, "ID_Тренера", "Спортивный_разряд");
             return View();
         }
 
@@ -55,7 +58,6 @@ namespace WebApplication1.Controllers
             }
 
             ViewBag.ID_Спорт_клуба = new SelectList(db.Спортивный_клуб, "ID_Спорт_клуба", "Название", сотрудники.ID_Спорт_клуба);
-            ViewBag.ID_Сотрудника = new SelectList(db.Тренер, "ID_Тренера", "Спортивный_разряд", сотрудники.ID_Сотрудника);
             return View(сотрудники);
         }
 
@@ -72,7 +74,6 @@ namespace WebApplication1.Controllers
                 return HttpNotFound();
             }
             ViewBag.ID_Спорт_клуба = new SelectList(db.Спортивный_клуб, "ID_Спорт_клуба", "Название", сотрудники.ID_Спорт_клуба);
-            ViewBag.ID_Сотрудника = new SelectList(db.Тренер, "ID_Тренера", "Спортивный_разряд", сотрудники.ID_Сотрудника);
             return View(сотрудники);
         }
 
@@ -90,7 +91,6 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.ID_Спорт_клуба = new SelectList(db.Спортивный_клуб, "ID_Спорт_клуба", "Название", сотрудники.ID_Спорт_клуба);
-            ViewBag.ID_Сотрудника = new SelectList(db.Тренер, "ID_Тренера", "Спортивный_разряд", сотрудники.ID_Сотрудника);
             return View(сотрудники);
         }
 

@@ -16,8 +16,8 @@ namespace WebApplication1.Models
 
     public partial class Спортсмен
     {
-        [Key, ForeignKey("Результат")]
-        
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID_Спортсмена { get; set; }
   
         public string Имя { get; set; }
@@ -26,7 +26,8 @@ namespace WebApplication1.Models
         public Nullable<System.DateTime> Дата_рождения { get; set; }
         public Nullable<int> Телефон { get; set; }
     
-        public virtual Договор Договор { get; set; }
-        public virtual Результат Результат { get; set; }
+        //public virtual Договор Договор { get; set; }
+       
+      
     }
 }

@@ -27,6 +27,6 @@ namespace WebApplication1.Models
         public Nullable<int> ID_Спорт_клуба { get; set; }
     
         public virtual Спортивный_клуб Спортивный_клуб { get; set; }
-        public virtual Тренер Тренер { get; set; }
+        //public virtual Тренер Тренер { get; set; }
     }
 }

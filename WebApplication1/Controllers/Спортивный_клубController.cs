@@ -1,6 +1,10 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 
@@ -13,8 +17,7 @@ namespace WebApplication1.Controllers
         // GET: Спортивный_клуб
         public ActionResult Index()
         {
-            var спортивный_клуб = db.Спортивный_клуб.Include(с => с.Владелец);
-            return View(спортивный_клуб.ToList());
+            return View(db.Спортивный_клуб.ToList());
         }
 
         // GET: Спортивный_клуб/Details/5
@@ -35,7 +38,6 @@ namespace WebApplication1.Controllers
         // GET: Спортивный_клуб/Create
         public ActionResult Create()
         {
-            ViewBag.ID_Спорт_клуба = new SelectList(db.Владелец, "ID_Владельца", "Имя");
             return View();
         }
 
@@ -53,7 +55,6 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID_Спорт_клуба = new SelectList(db.Владелец, "ID_Владельца", "Имя", спортивный_клуб.ID_Спорт_клуба);
             return View(спортивный_клуб);
         }
 
@@ -69,7 +70,6 @@ namespace WebApplication1.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ID_Спорт_клуба = new SelectList(db.Владелец, "ID_Владельца", "Имя", спортивный_клуб.ID_Спорт_клуба);
             return View(спортивный_клуб);
         }
 
@@ -86,7 +86,6 @@ namespace WebApplication1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ID_Спорт_клуба = new SelectList(db.Владелец, "ID_Владельца", "Имя", спортивный_клуб.ID_Спорт_клуба);
             return View(спортивный_клуб);
         }
 
