@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Подробно</h2>
+<h2>Details</h2>
 
 <div>
     <h4>Спортивный_клуб</h4>
@@ -35,6 +35,46 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Сауна)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Сауна)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Тренажерный_зал)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Тренажерный_зал)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Бассейн)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Бассейн)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Бар)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Бар)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Массажный_кабинет)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Массажный_кабинет)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Дата_основания)
         </dt>
 
@@ -45,6 +85,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Редактировать", "Edit", new { id = Model.ID_Спорт_клуба }) |
-    @Html.ActionLink("Вернуться к таблице", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Спорт_клуба }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

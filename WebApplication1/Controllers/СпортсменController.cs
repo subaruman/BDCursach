@@ -15,10 +15,20 @@ namespace WebApplication1.Controllers
         private DBConnection db = new DBConnection();
 
         // GET: Спортсмен
-        public ActionResult Index()
+        public ActionResult Index(string search, string filter)
         {
-            return View(db.Спортсмен.ToList());
+            if (!String.IsNullOrWhiteSpace(filter))
+            {
+                var temp = db.Спортсмен.AsEnumerable();
+
+                temp = temp.Where(x => x.Гражданство == filter);
+                return View(temp.ToList());
+
+            }
+            return View(db.Спортсмен.Where(x => x.Фамилия.Contains(search) || search == null).ToList());
+           // return View(db.Спортсмен.ToList());
         }
+        
 
         // GET: Спортсмен/Details/5
         public ActionResult Details(int? id)
@@ -46,7 +56,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Телефон")] Спортсмен спортсмен)
+        public ActionResult Create([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Телефон,Гражданство,Адрес_проживания")] Спортсмен спортсмен)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +88,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Телефон")] Спортсмен спортсмен)
+        public ActionResult Edit([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Телефон,Гражданство,Адрес_проживания")] Спортсмен спортсмен)
         {
             if (ModelState.IsValid)
             {

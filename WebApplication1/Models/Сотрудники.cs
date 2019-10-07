@@ -20,6 +20,7 @@ namespace WebApplication1.Models
         public int ID_Сотрудника { get; set; }
         public string Имя { get; set; }
         public string Фамилия { get; set; }
+        public string Отчество { get; set; }
         public Nullable<int> Телефон { get; set; }
         public string Должность { get; set; }
         public string Общий_стаж { get; set; }

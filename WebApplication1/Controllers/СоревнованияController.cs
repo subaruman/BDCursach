@@ -14,11 +14,24 @@ namespace WebApplication1.Controllers
     {
         private DBConnection db = new DBConnection();
 
-        // GET: Соревнования
-        public ActionResult Index()
+        public ActionResult Index(string filter)
         {
+            if (!String.IsNullOrWhiteSpace(filter))
+            {
+                var text = db.Соревнования.AsEnumerable();
+                text = text.Where(x => x.Город == filter);
+                return View(text.ToList());
+
+            }
             return View(db.Соревнования.ToList());
         }
+
+
+        // GET: Соревнования
+        //public ActionResult Index()
+        //{
+        //    return View(db.Соревнования.ToList());
+        //}
 
         // GET: Соревнования/Details/5
         public ActionResult Details(int? id)
@@ -46,7 +59,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Соревнований,Дата_соревнований,Тип_соревнований,Вид_спорта,Спонсор_соревнований,Место_проведения")] Соревнования соревнования)
+        public ActionResult Create([Bind(Include = "ID_Соревнований,Дата_соревнований,Тип_соревнований,Вид_спорта,Спонсор_соревнований,Город,Адрес")] Соревнования соревнования)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +91,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Соревнований,Дата_соревнований,Тип_соревнований,Вид_спорта,Спонсор_соревнований,Место_проведения")] Соревнования соревнования)
+        public ActionResult Edit([Bind(Include = "ID_Соревнований,Дата_соревнований,Тип_соревнований,Вид_спорта,Спонсор_соревнований,Город,Адрес")] Соревнования соревнования)
         {
             if (ModelState.IsValid)
             {

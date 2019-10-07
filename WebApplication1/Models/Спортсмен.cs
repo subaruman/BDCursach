@@ -25,9 +25,12 @@ namespace WebApplication1.Models
         public Nullable<bool> Пол { get; set; }
         public Nullable<System.DateTime> Дата_рождения { get; set; }
         public Nullable<int> Телефон { get; set; }
-    
+        public string Гражданство { get; set; }
+        public ulong Серия_номер_паспорта { get; set; }
+        public string Адрес_проживания { get; set; }
+                     
         //public virtual Договор Договор { get; set; }
-       
-      
+
+
     }
 }

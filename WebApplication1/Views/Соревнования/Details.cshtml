@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Подробно</h2>
+<h2>Details</h2>
 
 <div>
     <h4>Соревнования</h4>
@@ -43,16 +43,24 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Место_проведения)
+            @Html.DisplayNameFor(model => model.Город)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Место_проведения)
+            @Html.DisplayFor(model => model.Город)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Адрес)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Адрес)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Редактировать", "Edit", new { id = Model.ID_Соревнований }) |
-    @Html.ActionLink("Вернуться к таблице", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Соревнований }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

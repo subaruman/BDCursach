@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Добавление записи</h2>
+<h2>Create</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -47,21 +47,29 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Место_проведения, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Город, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Место_проведения, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Место_проведения, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Город, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Город, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Адрес, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Адрес, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Адрес, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Добавить" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Назад к таблице", "Index")
+    @Html.ActionLink("Back to List", "Index")
 </div>

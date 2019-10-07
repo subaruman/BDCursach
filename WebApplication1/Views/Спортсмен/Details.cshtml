@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Подробно</h2>
+<h2>Details</h2>
 
 <div>
     <h4>Спортсмен</h4>
@@ -50,9 +50,25 @@
             @Html.DisplayFor(model => model.Телефон)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Гражданство)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Гражданство)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Адрес_проживания)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Адрес_проживания)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Редактировать", "Edit", new { id = Model.ID_Спортсмена }) |
-    @Html.ActionLink("Вернуться к таблице", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Спортсмена }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>

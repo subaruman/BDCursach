@@ -1,13 +1,26 @@
 ﻿@model IEnumerable<WebApplication1.Models.Спортсмен>
 
 @{
-    ViewBag.Title = "Спортсмен";
+    ViewBag.Title = "Index";
 }
 
-    <h2>Спортсмен</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Добавить запись", "Create")
+    @Html.ActionLink("Create New", "Create")
+    @using (@Html.BeginForm("Index", "Спортсмен"))
+    {
+        @Html.TextBox("search", "", new { style = "width:100%" })
+        <br />
+        <input type="submit" class="btn btn-primary" value="Найти по фамилии" />
+    }
+    <br />
+    @using (@Html.BeginForm("Index", "Спортсмен"))
+    {
+        @Html.TextBox("filter", "", new { style = "width:100%" })
+        <br />
+        <input type="submit" class="btn btn-primary" value="Отфильтровать по гражданству" />
+    }
 </p>
 <table class="table">
     <tr>
@@ -25,6 +38,12 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Телефон)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Гражданство)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Адрес_проживания)
         </th>
         <th></th>
     </tr>
@@ -47,9 +66,15 @@
             @Html.DisplayFor(modelItem => item.Телефон)
         </td>
         <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.ID_Спортсмена }) |
-            @Html.ActionLink("Подробно", "Details", new { id=item.ID_Спортсмена }) |
-            @Html.ActionLink("Удалить", "Delete", new { id=item.ID_Спортсмена })
+            @Html.DisplayFor(modelItem => item.Гражданство)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Адрес_проживания)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Спортсмена }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Спортсмена }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Спортсмена })
         </td>
     </tr>
 }

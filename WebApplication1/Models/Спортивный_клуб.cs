@@ -27,6 +27,11 @@ namespace WebApplication1.Models
         public string Название { get; set; }
         public string Адрес { get; set; }
         public Nullable<int> Телефон { get; set; }
+        public Nullable<bool> Сауна { get; set; }
+        public Nullable<bool> Тренажерный_зал { get; set; }
+        public Nullable<bool> Бассейн { get; set; }
+        public Nullable<bool> Бар { get; set; }
+        public Nullable<bool> Массажный_кабинет { get; set; }
         public Nullable<System.DateTime> Дата_основания { get; set; }
     
        // public virtual Владелец Владелец { get; set; }

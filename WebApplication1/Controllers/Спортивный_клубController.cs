@@ -14,10 +14,16 @@ namespace WebApplication1.Controllers
     {
         private DBConnection db = new DBConnection();
 
-        // GET: Спортивный_клуб
-        public ActionResult Index()
+        public interface IExceptionFilter
         {
-            return View(db.Спортивный_клуб.ToList());
+            void OnException(ExceptionContext filterContext);
+        }
+
+        // GET: Спортивный_клуб
+        public ActionResult Index(string search)
+        {
+            return View(db.Спортивный_клуб.Where(x => x.Название.Contains(search) || search == null).ToList());
+            //return View(db.Спортивный_клуб.ToList());
         }
 
         // GET: Спортивный_клуб/Details/5
@@ -46,7 +52,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Спорт_клуба,Название,Адрес,Телефон,Дата_основания")] Спортивный_клуб спортивный_клуб)
+        public ActionResult Create([Bind(Include = "ID_Спорт_клуба,Название,Адрес,Телефон,Сауна,Тренажерный_зал,Бассейн,Бар,Массажный_кабинет,Дата_основания")] Спортивный_клуб спортивный_клуб)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +84,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Спорт_клуба,Название,Адрес,Телефон,Дата_основания")] Спортивный_клуб спортивный_клуб)
+        public ActionResult Edit([Bind(Include = "ID_Спорт_клуба,Название,Адрес,Телефон,Сауна,Тренажерный_зал,Бассейн,Бар,Массажный_кабинет,Дата_основания")] Спортивный_клуб спортивный_клуб)
         {
             if (ModelState.IsValid)
             {
@@ -90,6 +96,7 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Спортивный_клуб/Delete/5
+        [HandleError(ExceptionType = typeof(DeletedRowInaccessibleException), View = "~/Error")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,6 +114,7 @@ namespace WebApplication1.Controllers
         // POST: Спортивный_клуб/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [HandleError(ExceptionType = typeof(DeletedRowInaccessibleException), View = "~/Error")]
         public ActionResult DeleteConfirmed(int id)
         {
             Спортивный_клуб спортивный_клуб = db.Спортивный_клуб.Find(id);

@@ -4,9 +4,9 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Удаление</h2>
+<h2>Delete</h2>
 
-<h3>Вы уверены, что хотите удалить?</h3>
+<h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>Спортивный_клуб</h4>
     <hr />
@@ -36,6 +36,46 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Сауна)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Сауна)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Тренажерный_зал)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Тренажерный_зал)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Бассейн)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Бассейн)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Бар)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Бар)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Массажный_кабинет)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Массажный_кабинет)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Дата_основания)
         </dt>
 
@@ -49,8 +89,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Удалить" class="btn btn-default" /> |
-            @Html.ActionLink("Вернуться к таблице", "Index")
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
         </div>
     }
 </div>

@@ -14,12 +14,30 @@ namespace WebApplication1.Controllers
     {
         private DBConnection db = new DBConnection();
 
-        // GET: Сотрудники
-        public ActionResult Index()
+   
+        public ActionResult Index(string filter)
         {
+            if (!String.IsNullOrWhiteSpace(filter))
+            {
+                var temp = db.Сотрудники.AsEnumerable();
+
+                temp = temp.Where(x => x.Фамилия == filter);
+                return View(temp.ToList());
+
+            }
+
             var сотрудники = db.Сотрудники.Include(с => с.Спортивный_клуб);
             return View(сотрудники.ToList());
+
         }
+
+
+        // GET: Сотрудники
+        //public ActionResult Index()
+        //{
+        //    var сотрудники = db.Сотрудники.Include(с => с.Спортивный_клуб);
+        //    return View(сотрудники.ToList());
+        //}
 
         // GET: Сотрудники/Details/5
         public ActionResult Details(int? id)
@@ -48,7 +66,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Сотрудника,Имя,Фамилия,Телефон,Должность,Общий_стаж,Зарплата,ID_Спорт_клуба")] Сотрудники сотрудники)
+        public ActionResult Create([Bind(Include = "ID_Сотрудника,Имя,Фамилия,Отчество,Телефон,Должность,Общий_стаж,Зарплата,ID_Спорт_клуба")] Сотрудники сотрудники)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +100,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Сотрудника,Имя,Фамилия,Телефон,Должность,Общий_стаж,Зарплата,ID_Спорт_клуба")] Сотрудники сотрудники)
+        public ActionResult Edit([Bind(Include = "ID_Сотрудника,Имя,Фамилия,Отчество,Телефон,Должность,Общий_стаж,Зарплата,ID_Спорт_клуба")] Сотрудники сотрудники)
         {
             if (ModelState.IsValid)
             {

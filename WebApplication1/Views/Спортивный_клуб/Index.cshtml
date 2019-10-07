@@ -1,13 +1,21 @@
 ﻿@model IEnumerable<WebApplication1.Models.Спортивный_клуб>
 
 @{
-    ViewBag.Title = "Спортивный клуб";
+    ViewBag.Title = "Index";
 }
 
-    <h2>Спортивный клуб</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Добавить запись", "Create")
+    @Html.ActionLink("Create New", "Create")
+
+    @using (@Html.BeginForm("Index", "Спортивный_клуб"))
+    {
+        @Html.TextBox("search", "", new { style = "width:100%" })
+        <br />
+        <input type="submit" class="btn btn-primary" value="Найти по названию" />
+    }
+
 </p>
 <table class="table">
     <tr>
@@ -19,6 +27,21 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Телефон)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Сауна)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Тренажерный_зал)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Бассейн)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Бар)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Массажный_кабинет)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Дата_основания)
@@ -38,12 +61,27 @@
             @Html.DisplayFor(modelItem => item.Телефон)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Сауна)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Тренажерный_зал)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Бассейн)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Бар)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Массажный_кабинет)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Дата_основания)
         </td>
         <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.ID_Спорт_клуба }) |
-            @Html.ActionLink("Подробно", "Details", new { id=item.ID_Спорт_клуба }) |
-            @Html.ActionLink("Удалить", "Delete", new { id=item.ID_Спорт_клуба })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Спорт_клуба }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Спорт_клуба }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Спорт_клуба })
         </td>
     </tr>
 }

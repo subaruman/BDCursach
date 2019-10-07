@@ -63,6 +63,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -137,10 +138,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\DeleteException.cs" />
     <Compile Include="Models\Соревнования.cs" />
     <Compile Include="Models\Сотрудники.cs" />
     <Compile Include="Models\Спортивный_клуб.cs" />
     <Compile Include="Models\Спортсмен.cs" />
+    <Compile Include="Models\ХранимаяПроцедура.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,16 +182,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Соревнования\Create.cshtml" />
-    <Content Include="Views\Соревнования\Delete.cshtml" />
-    <Content Include="Views\Соревнования\Details.cshtml" />
-    <Content Include="Views\Соревнования\Edit.cshtml" />
-    <Content Include="Views\Соревнования\Index.cshtml" />
-    <Content Include="Views\Спортсмен\Create.cshtml" />
-    <Content Include="Views\Спортсмен\Delete.cshtml" />
-    <Content Include="Views\Спортсмен\Details.cshtml" />
-    <Content Include="Views\Спортсмен\Edit.cshtml" />
-    <Content Include="Views\Спортсмен\Index.cshtml" />
     <Content Include="Views\Сотрудники\Create.cshtml" />
     <Content Include="Views\Сотрудники\Delete.cshtml" />
     <Content Include="Views\Сотрудники\Details.cshtml" />
@@ -199,6 +192,17 @@
     <Content Include="Views\Спортивный_клуб\Details.cshtml" />
     <Content Include="Views\Спортивный_клуб\Edit.cshtml" />
     <Content Include="Views\Спортивный_клуб\Index.cshtml" />
+    <Content Include="Views\Спортсмен\Create.cshtml" />
+    <Content Include="Views\Спортсмен\Delete.cshtml" />
+    <Content Include="Views\Спортсмен\Details.cshtml" />
+    <Content Include="Views\Спортсмен\Edit.cshtml" />
+    <Content Include="Views\Спортсмен\Index.cshtml" />
+    <Content Include="Views\Соревнования\Create.cshtml" />
+    <Content Include="Views\Соревнования\Delete.cshtml" />
+    <Content Include="Views\Соревнования\Details.cshtml" />
+    <Content Include="Views\Соревнования\Edit.cshtml" />
+    <Content Include="Views\Соревнования\Index.cshtml" />
+    <Content Include="Views\Спортивный_клуб\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
