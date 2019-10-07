@@ -117,10 +117,20 @@ namespace WebApplication1.Controllers
         [HandleError(ExceptionType = typeof(DeletedRowInaccessibleException), View = "~/Error")]
         public ActionResult DeleteConfirmed(int id)
         {
+            try { 
             Спортивный_клуб спортивный_клуб = db.Спортивный_клуб.Find(id);
             db.Спортивный_клуб.Remove(спортивный_клуб);
             db.SaveChanges();
             return RedirectToAction("Index");
+            } catch
+            {
+                return Redirect("~/Спортивный_клуб/Error/");                             
+            }
+        }
+
+        public ActionResult Error()
+        {
+            return View();
         }
 
         protected override void Dispose(bool disposing)
