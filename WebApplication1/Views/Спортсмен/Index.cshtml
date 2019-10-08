@@ -37,6 +37,9 @@
             @Html.DisplayNameFor(model => model.Дата_рождения)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Группа)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Телефон)
         </th>
         <th>
@@ -49,34 +52,37 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Имя)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Фамилия)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Пол)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Дата_рождения)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Телефон)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Гражданство)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Адрес_проживания)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Спортсмена }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Спортсмена }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Спортсмена })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Имя)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Фамилия)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Пол)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Дата_рождения)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Группа)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Телефон)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Гражданство)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Адрес_проживания)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID_Спортсмена }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID_Спортсмена }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID_Спортсмена })
+    </td>
+</tr>
 }
 
 </table>

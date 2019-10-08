@@ -23,7 +23,9 @@ namespace WebApplication1.Models
         public string Имя { get; set; }
         public string Фамилия { get; set; }
         public Nullable<bool> Пол { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public Nullable<System.DateTime> Дата_рождения { get; set; }
+        public string Группа { get; set; }
         public Nullable<int> Телефон { get; set; }
         public string Гражданство { get; set; }
         public ulong Серия_номер_паспорта { get; set; }

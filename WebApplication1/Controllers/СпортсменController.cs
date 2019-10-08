@@ -56,12 +56,15 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Телефон,Гражданство,Адрес_проживания")] Спортсмен спортсмен)
+        public ActionResult Create([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Группа,Телефон,Гражданство,Адрес_проживания")] Спортсмен спортсмен)
         {
             if (ModelState.IsValid)
             {
                 db.Спортсмен.Add(спортсмен);
                 db.SaveChanges();
+
+                db.Database.ExecuteSqlCommand("EXEC TestAge");
+
                 return RedirectToAction("Index");
             }
 
@@ -88,7 +91,7 @@ namespace WebApplication1.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Телефон,Гражданство,Адрес_проживания")] Спортсмен спортсмен)
+        public ActionResult Edit([Bind(Include = "ID_Спортсмена,Имя,Фамилия,Пол,Дата_рождения,Группа,Телефон,Гражданство,Адрес_проживания")] Спортсмен спортсмен)
         {
             if (ModelState.IsValid)
             {

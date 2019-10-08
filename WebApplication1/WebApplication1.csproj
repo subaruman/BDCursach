@@ -138,7 +138,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\DeleteException.cs" />
     <Compile Include="Models\Соревнования.cs" />
     <Compile Include="Models\Сотрудники.cs" />
     <Compile Include="Models\Спортивный_клуб.cs" />

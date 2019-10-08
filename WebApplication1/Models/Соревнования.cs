@@ -23,6 +23,7 @@ namespace WebApplication1.Models
         //}
         [Key]
         public int ID_Соревнований { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public Nullable<System.DateTime> Дата_соревнований { get; set; }
         public string Тип_соревнований { get; set; }
         public string Вид_спорта { get; set; }

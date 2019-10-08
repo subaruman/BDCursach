@@ -32,7 +32,8 @@ namespace WebApplication1.Models
         public Nullable<bool> Бассейн { get; set; }
         public Nullable<bool> Бар { get; set; }
         public Nullable<bool> Массажный_кабинет { get; set; }
-        public Nullable<System.DateTime> Дата_основания { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public Nullable<DateTime> Дата_основания { get; set; }
     
        // public virtual Владелец Владелец { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
