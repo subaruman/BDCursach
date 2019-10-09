@@ -142,7 +142,6 @@
     <Compile Include="Models\Сотрудники.cs" />
     <Compile Include="Models\Спортивный_клуб.cs" />
     <Compile Include="Models\Спортсмен.cs" />
-    <Compile Include="Models\ХранимаяПроцедура.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
