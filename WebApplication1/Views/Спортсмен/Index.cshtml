@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Спортсмен</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Создать", "Create")
     @using (@Html.BeginForm("Index", "Спортсмен"))
     {
         @Html.TextBox("search", "", new { style = "width:100%" })
@@ -78,9 +78,9 @@
         @Html.DisplayFor(modelItem => item.Адрес_проживания)
     </td>
     <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.ID_Спортсмена }) |
-        @Html.ActionLink("Details", "Details", new { id = item.ID_Спортсмена }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.ID_Спортсмена })
+        @Html.ActionLink("Редактировать", "Edit", new { id = item.ID_Спортсмена }) |
+        @Html.ActionLink("Подробнее", "Details", new { id = item.ID_Спортсмена }) |
+        @Html.ActionLink("Удалить", "Delete", new { id = item.ID_Спортсмена })
     </td>
 </tr>
 }

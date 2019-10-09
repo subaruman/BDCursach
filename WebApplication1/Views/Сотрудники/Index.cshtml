@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Сотрудники</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Создать", "Create")
 
     @using (@Html.BeginForm("Index", "Сотрудники"))
     {
@@ -73,9 +73,9 @@
             @Html.DisplayFor(modelItem => item.Зарплата)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Сотрудника }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Сотрудника }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Сотрудника })
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.ID_Сотрудника }) |
+            @Html.ActionLink("Подробнее", "Details", new { id=item.ID_Сотрудника }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.ID_Сотрудника })
         </td>
     </tr>
 }

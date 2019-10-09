@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Спортивный клуб</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Создать", "Create")
 
     @using (@Html.BeginForm("Index", "Спортивный_клуб"))
     {
@@ -79,9 +79,9 @@
             @Html.DisplayFor(modelItem => item.Дата_основания)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Спорт_клуба }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Спорт_клуба }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Спорт_клуба })
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.ID_Спорт_клуба }) |
+            @Html.ActionLink("Подробнее", "Details", new { id=item.ID_Спорт_клуба }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.ID_Спорт_клуба })
         </td>
     </tr>
 }
